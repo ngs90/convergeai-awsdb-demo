@@ -44,10 +44,10 @@ jobs:
     #   run: |
     #     pip install pytest setuptools wheel
 
-    # - name: Extract branch name
-    #   shell: bash
-    #   run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-    #   id: extract_branch
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
 
     - name: Update Databricks Git folder
       run: |
