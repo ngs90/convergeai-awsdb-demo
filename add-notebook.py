@@ -8,4 +8,4 @@ def product(a, b):
 
     return a * b
 
-add(5, 2), product(5, 2)
+add(5, 2), product(5, 2), 2
