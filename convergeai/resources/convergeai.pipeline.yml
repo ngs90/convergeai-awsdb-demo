@@ -1,0 +1,13 @@
+# The main pipeline for convergeai
+resources:
+  pipelines:
+    convergeai_pipeline:
+      name: convergeai_pipeline
+      catalog: convergeai_dev
+      target: convergeai_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src
